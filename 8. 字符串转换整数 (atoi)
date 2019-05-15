@@ -1,0 +1,4 @@
+class Solution(object):
+    def myAtoi(self, str):
+        a=int(*re.findall('^[\+\-]?\d+', str.lstrip()))
+        return min(max(a,-2**31),2**31-1)
