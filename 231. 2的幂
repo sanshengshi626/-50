@@ -1,0 +1,10 @@
+class Solution(object):
+    def isPowerOfTwo(self, n):
+        import math
+        if n<=0:
+            return False
+        if int(math.log(n,2))==round(math.log(n,2),10):
+            return True
+        else:
+            return False
+        
