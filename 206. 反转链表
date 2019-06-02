@@ -1,0 +1,15 @@
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+        if head == None or head.next == None:
+            return head
+        p = ListNode(head.val) 
+        q = ListNode(head.next.val)
+        q.next = p
+        r = head.next.next
+        while r is not None:
+            tmp = ListNode(r.val)
+            tmp.next = q
+            q = tmp
+            r = r.next   
+        return q
+        
